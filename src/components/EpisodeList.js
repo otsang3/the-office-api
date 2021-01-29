@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import EpisodeListItem from './EpisodeListItem';
 
 function EpisodeList(props) {
 
@@ -12,10 +13,14 @@ function EpisodeList(props) {
             .catch(err => console.log(err))
     },[]);
 
-    console.log(state);
-
     const renderEpisodeList = () => {
-
+        const episodesArr = [];
+        state.forEach((episode, index) => {
+            episodesArr.push(
+                <EpisodeListItem key={index} episode={episode}/>
+            )
+        })
+        return episodesArr;
     }
 
     if (state === null) {
