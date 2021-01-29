@@ -15,7 +15,7 @@ function EpisodeMain() {
         const seasonsArr = [];
         state.forEach((season, index) => {
             seasonsArr.push(
-                <Link key={index} to="/">Season {season.number}</Link>
+                <Link key={index} to={{ pathname: `/seasons/${season.id}` }}>Season {season.number}</Link>
             )
         })
         return seasonsArr;

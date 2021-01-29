@@ -12,7 +12,7 @@ function App() {
         <NavBar/>
         <Switch>
           <Route exact path="/" render={() => <HomePage/>}/>
-          <Route exact path="/episodes" render={() => <EpisodeMain/>}/>
+          <Route exact path="/seasons" render={() => <EpisodeMain/>}/>
         </Switch>
       </div>
     </Router>
