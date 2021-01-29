@@ -5,9 +5,7 @@ function EpisodeListItem(props) {
     const episode = props.episode;
 
     const removeTags = (str) => {
-
         return str.replace('<p>', '').replace('</p>', '');
-
     }
 
     return(
