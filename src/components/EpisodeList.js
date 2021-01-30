@@ -4,6 +4,7 @@ import EpisodeListItem from './EpisodeListItem';
 function EpisodeList(props) {
 
     const { location: {state: id}} = props.id;
+    const { match: {params: {name: seasonNum}}} = props.id;
     const [ state, setState ] = useState(null)
 
     useEffect(() => {
@@ -32,8 +33,11 @@ function EpisodeList(props) {
     }
 
     return(
-        <div>
-            {renderEpisodeList()}
+        <div className="episode-list-container">
+            <h3>Season {seasonNum}</h3>
+            <div className="episode-list">
+                {renderEpisodeList()}
+            </div>  
         </div>
     )
 }
