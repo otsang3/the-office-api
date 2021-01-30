@@ -13,6 +13,10 @@ code {
     monospace;
 }
 
+.app {
+  background-image: url('./images/digital-characters2.png');
+}
+
 .banner-col {
   height: 100%;
   text-align: center;
@@ -32,6 +36,11 @@ code {
 .banner-img3 {
   height: 100%;
   width: 80%;
+}
+
+.homepage {
+  height: 100vh;
+  width: 100vw;
 }
 
 .img-banner {

@@ -13,7 +13,7 @@ import NavBar from './components/NavBar';
 function App() {
   return (
     <Router>
-      <div className="app">
+      <div>
         <div className="img-banner">
           <div className="banner-col">
             <img className="banner-img1" src={dmpc} alt="dunder-mifflin"/>
@@ -25,13 +25,15 @@ function App() {
             <img className="banner-img3" src={logo} alt="the-office-logo"/>
           </div>
         </div>
-        
         <NavBar/>
-        <Switch>
-          <Route exact path="/" render={() => <HomePage/>}/>
-          <Route exact path="/seasons" render={() => <EpisodeMain/>}/>
-          <Route exact path="/seasons/:name" render={(id) => <EpisodeList id={id}/>}/>
-        </Switch>
+        <div className="app">
+          <Switch>
+            <Route exact path="/" render={() => <HomePage/>}/>
+            <Route exact path="/seasons" render={() => <EpisodeMain/>}/>
+            <Route exact path="/seasons/:name" render={(id) => <EpisodeList id={id}/>}/>
+          </Switch>
+        </div>
+        
       </div>
     </Router>
     
