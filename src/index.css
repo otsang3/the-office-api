@@ -13,13 +13,45 @@ code {
     monospace;
 }
 
+.banner-col {
+  height: 100%;
+  text-align: center;
+  width: 25%;
+}
+
+.banner-img1 {
+  height: 100%;
+  width: 100%;
+}
+
+.banner-img2 {
+  height: 100%;
+  width: 65%;
+}
+
+.banner-img3 {
+  height: 100%;
+  width: 80%;
+}
+
+.img-banner {
+  display: flex;
+  height: 7em;
+  justify-content: space-around;
+}
+
 .nav-bar a {
   color: inherit;
   text-decoration: none;
 }
 
 .nav-bar ul {
-  border: 1px solid green;
+  align-items: center;
+  background-color: black;
+  color: white;
   display: flex;
   flex-direction: row;
+  height: 3em;
+  justify-content: center;
+  margin: 0 0;
 }
