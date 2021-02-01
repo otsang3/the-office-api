@@ -15,6 +15,7 @@ code {
 
 .app {
   background-image: url('./images/digital-characters2.png');
+  min-height: 70vh;
   padding: 1em 0;
 }
 
@@ -58,7 +59,7 @@ code {
   background-color: lightgray;
   margin: 0 auto;
   padding: 0 1em;
-  width: 75%;
+  width: 70%;
 }
 
 .homepage {
@@ -70,6 +71,8 @@ code {
   display: flex;
   height: 7em;
   justify-content: space-around;
+  margin-bottom: 0.5em;
+  padding-top: 0.5em;
 }
 
 .nav-bar a {

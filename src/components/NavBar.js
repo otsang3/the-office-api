@@ -7,7 +7,7 @@ function NavBar() {
         <div className="nav-bar">
             <ul>
                 <Link to="/">Home</Link>
-                <Link to="/seasons">Episodes</Link>
+                <Link to="/seasons/1">Episodes</Link>
             </ul>
         </div>
     )

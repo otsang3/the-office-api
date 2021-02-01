@@ -3,15 +3,52 @@ import EpisodeListItem from './EpisodeListItem';
 
 function EpisodeList(props) {
 
-    const { location: {state: id}} = props.id;
-    const { match: {params: {name: seasonNum}}} = props.id;
-    const [ state, setState ] = useState(null)
+    let id;
+    let { match: {params: {name: seasonNum}}} = props.id;
+    seasonNum = parseInt(seasonNum);
+    const [ state, setState ] = useState(null);
+    const [ loading, setLoading ] = useState(true);
+
+    switch (seasonNum) {
+        case 1:
+            id = 2087;
+            break;
+        case 2:
+            id = 2088;
+            break;
+        case 3:
+            id = 2089;
+            break;
+        case 4:
+            id = 2090;
+            break;
+        case 5:
+            id = 2091;
+            break;
+        case 6:
+            id = 2092;
+            break;
+        case 7:
+            id = 2093;
+            break;
+        case 8:
+            id = 2094;
+            break;
+        default:
+            id = null;
+    }
 
     useEffect(() => {
         fetch(`http://api.tvmaze.com/seasons/${id}/episodes`)
             .then(res => res.json())
-            .then(data => setState(data))
-            .catch(err => console.log(err))
+            .then(data => {
+                setState(data)
+                setLoading(false);
+            })
+            .catch(err => {
+                console.log(err)
+                setLoading(false);
+            })
     },[]);
 
     const renderEpisodeList = () => {
@@ -24,10 +61,18 @@ function EpisodeList(props) {
         return episodesArr;
     }
 
-    if (state === null) {
+    if (loading) {
         return(
             <div>
-                Page cannot be loaded
+                Loading...
+            </div>
+        )
+    }
+
+    if (!state && !loading) {
+        return(
+            <div>
+                Error
             </div>
         )
     }
