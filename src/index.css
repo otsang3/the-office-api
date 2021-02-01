@@ -90,3 +90,20 @@ code {
   justify-content: center;
   margin: 0 0;
 }
+
+.season-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.season-list-item, .season-list-item-active {
+  color: black;
+  text-decoration: none;
+}
+
+.season-list-item-active {
+  font-weight: 600;
+}

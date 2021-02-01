@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import EpisodeListItem from './EpisodeListItem';
+import SeasonList from './SeasonList';
 
 function EpisodeList(props) {
 
@@ -64,7 +65,7 @@ function EpisodeList(props) {
     if (loading) {
         return(
             <div>
-                Loading...
+                
             </div>
         )
     }
@@ -79,6 +80,9 @@ function EpisodeList(props) {
 
     return(
         <div className="episode-list-container">
+            <div>
+                <SeasonList id={seasonNum}/>
+            </div>
             <h3>Season {seasonNum}</h3>
             <div className="episode-list">
                 {renderEpisodeList()}
