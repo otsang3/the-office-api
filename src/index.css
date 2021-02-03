@@ -92,6 +92,7 @@ code {
 }
 
 .season-list-container {
+  font-family:'Comic Sans MS';
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -102,6 +103,7 @@ code {
 .season-list-item, .season-list-item-active {
   color: black;
   text-decoration: none;
+  
 }
 
 .season-list-item-active {

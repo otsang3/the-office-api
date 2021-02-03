@@ -6,6 +6,7 @@ import EpisodeList from './components/EpisodeList';
 import HomePage from './components/HomePage';
 import logo from './images/logo.png';
 import NavBar from './components/NavBar';
+import QuotesPage from './components/QuotesPage';
 
 
 
@@ -29,6 +30,7 @@ function App() {
           <Switch>
             <Route exact path="/" render={() => <HomePage/>}/>
             <Route exact path="/seasons/:name" render={(id) => <EpisodeList id={id}/>}/>
+            <Route exact path="/quotes" render={() => <QuotesPage/>}/>
           </Switch>
         </div>
         

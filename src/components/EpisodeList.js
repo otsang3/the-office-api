@@ -50,7 +50,7 @@ function EpisodeList(props) {
                 console.log(err)
                 setLoading(false);
             })
-    },[]);
+    }, [seasonNum]);
 
     const renderEpisodeList = () => {
         const episodesArr = [];

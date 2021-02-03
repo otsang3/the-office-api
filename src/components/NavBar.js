@@ -8,6 +8,7 @@ function NavBar() {
             <ul>
                 <Link to="/">Home</Link>
                 <Link to="/seasons/1">Episodes</Link>
+                <Link to="/quotes">Random Quotes</Link>
             </ul>
         </div>
     )
